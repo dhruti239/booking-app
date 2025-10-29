@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff8ec;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #f4d35e;
+  color: #333;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.tagline {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f4d35e;
+  font-size: 0.9rem;
 }
+/* 💫 Animation and hover effects */
 
-@keyframes App-logo-spin {
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(10px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.app-container {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+button {
+  background-color: #f4d35e;
+  color: #333;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #f1c40f;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(241, 196, 15, 0.5);
+}
+
+button:active {
+  transform: scale(0.97);
+  background-color: #e2b707;
+}
+
+input, select {
+  border: 2px solid #f4d35e;
+  border-radius: 6px;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #f1c40f;
+  box-shadow: 0 0 5px rgba(241, 196, 15, 0.4);
+  outline: none;
 }
